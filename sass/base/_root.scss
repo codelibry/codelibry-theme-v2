@@ -1,5 +1,3 @@
-@use "../abstracts" as *;
-
 :root {
   @each $color, $shade-map in $active-theme {
     @each $shade, $value in $shade-map {
