@@ -1,0 +1,40 @@
+@use "../abstracts" as *
+
+.section
+  padding-block: $section-padding-block
+
+.mx-auto
+  margin-inline: auto
+
+@each $size-name, $size-value in $sizes
+  .m
+    &-#{$size-name}
+      margin: $size-value
+    &t-#{$size-name}
+      margin-block-start: $size-value
+    &b-#{$size-name}
+      margin-block-end: $size-value
+    &y-#{$size-name}
+      margin-block: $size-value
+    &l-#{$size-name}
+      margin-inline-start: $size-value
+    &r-#{$size-name}
+      margin-inline-end: $size-value
+    &x-#{$size-name}
+      margin-inline: $size-value
+
+  .p
+    &-#{$size-name}
+      padding: $size-value
+    &t-#{$size-name}
+      padding-block-start: $size-value
+    &b-#{$size-name}
+      padding-block-end: $size-value
+    &y-#{$size-name}
+      padding-block: $size-value
+    &l-#{$size-name}
+      padding-inline-start: $size-value
+    &r-#{$size-name}
+      padding-inline-end: $size-value
+    &x-#{$size-name}
+      padding-inline: $size-value
