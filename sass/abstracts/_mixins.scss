@@ -46,3 +46,12 @@
     @error 'the keyword #{$size} is not in the $breakpoints map';
   }
 }
+
+
+@mixin adaptive-font($pcSize, $mobSize, $maxWidth: 1280) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
