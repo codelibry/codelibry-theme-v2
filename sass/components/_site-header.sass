@@ -5,9 +5,14 @@
 
   &__inner
     display: flex
-    gap: $size-4
+    gap: $size-400
     align-items: $site-header-alignment
-    justify-content: $site-header-jusitifcation-small-screens
+    justify-content: $site-header-jusitifcation-large-screens
 
-    @include mq(medium)
-      justify-content: $site-header-jusitifcation-large-screens
+
+  @include max-screen(medium)
+    &__inner
+      justify-content: $site-header-jusitifcation-small-screens
+
+    &__nav
+      display: none

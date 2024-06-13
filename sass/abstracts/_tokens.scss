@@ -10,8 +10,8 @@ $color-text-interactive-hover: $color-accent-500;
 // set to 0 to disable
 $letter-spacing-loose: 0;
 
-$border-radius-1: $size-2;
-$border-radius-2: $size-4;
+$border-radius-1: $size-200;
+$border-radius-2: $size-400;
 
 $box-shadow-1: 0px 6px 5px rgba(0, 0, 0, 0.012),
   0px 22px 18px rgba(0, 0, 0, 0.018), 0px 100px 80px rgba(0, 0, 0, 0.03);
@@ -54,13 +54,13 @@ $heading-3-font-size: $font-size-700;
 $heading-3-color: $heading-color-default;
 
 // layout
-$grid-gap: $size-6;
-$flex-group-gap: $size-4;
+$grid-gap: $size-200;
+$flex-group-gap: $size-200;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
 $section-padding-block: clamp(5rem, 10vh, 6rem);
 
-$container-min-margin-inline: $size-4;
+$container-min-margin-inline: $size-400;
 $container-max-width: 64rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
@@ -68,7 +68,7 @@ $container-max-width-wide: 75rem;
 // site header
 $site-header-background-color: $color-primary-300;
 $site-header-color: $color-neutral-900;
-$site-header-padding: $size-8 0;
+$site-header-padding: $size-500 0;
 $site-header-margin: 0;
 $site-header-jusitifcation-small-screens: center;
 $site-header-jusitifcation-large-screens: space-between;
@@ -78,7 +78,7 @@ $site-header-alignment: center;
 $navigation-color: $site-header-color;
 $navigation-color-hover: $color-primary-300;
 $navigation-font-size: $font-size-400;
-$navigation-gap: $size-9;
+$navigation-gap: $size-400;
 $navigation-link-text-decoration: none;
 $navigation-font-family: $body-font-family;
 $navigation-font-weight: $body-font-weight;
@@ -100,6 +100,9 @@ $button-padding: 0.75em 2em;
 $button-border: 0;
 $button-border-radius: $border-radius-1;
 
+$button-default-background: transparent;
+$button-default-hover-background: $color-neutral-100;
+
 $button-accent-color: $color-neutral-100;
 $button-accent-background: $color-accent-400;
 $button-accent-color-hover: $color-neutral-100;
@@ -110,8 +113,8 @@ $button-primary-color-hover: $color-neutral-100;
 $button-primary-background-hover: $color-primary-800;
 
 // cards
-$card-flow-spacing: $size-2;
-$card-padding: $size-8;
+$card-flow-spacing: $size-200;
+$card-padding: $size-600;
 $card-shadow: $box-shadow-1;
 $card-border-radius: $border-radius-2;
 $card-background-default: $color-primary-100;
@@ -134,7 +137,7 @@ $form-input-font-size: $body-font-size;
 $form-input-background-color: $color-neutral-100;
 $form-input-border-default: 3px solid $color-primary-200;
 $form-input-border-focus: 3px solid $color-primary-400;
-$form-input-padding: $size-3;
+$form-input-padding: $size-400;
 $form-input-border-radius: $border-radius-1;
 
 $form-placeholder-color: $color-primary-300;
