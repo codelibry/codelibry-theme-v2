@@ -9,7 +9,7 @@
   row-gap: $grid-row-gap-desktop;
 
   // tablet
-  @include max-screen(large) {
+  @include max-screen(medium) {
     grid-template-columns: repeat($grid-columns-tablet, 1fr);
     column-gap: $grid-column-gap-tablet;
     row-gap: $grid-row-gap-tablet;
@@ -43,7 +43,7 @@
 
 // create all grid column classes for tablet
 @for $i from 1 through $grid-columns-tablet {
-  @include max-screen(large) {
+  @include max-screen(medium) {
     .col-md-#{$i} {
       grid-column: span #{$i};
     }
