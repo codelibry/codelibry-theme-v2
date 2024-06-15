@@ -6,17 +6,20 @@
   display: grid;
   grid-template-columns: repeat($grid-columns-desktop, 1fr);
   column-gap: $grid-column-gap-desktop;
+  row-gap: $grid-row-gap-desktop;
 
   // tablet
   @include max-screen(large) {
     grid-template-columns: repeat($grid-columns-tablet, 1fr);
     column-gap: $grid-column-gap-tablet;
+    row-gap: $grid-row-gap-tablet;
   }
 
   // mobile
   @include max-screen(small) {
     grid-template-columns: repeat($grid-columns-mobile, 1fr);
     column-gap: $grid-column-gap-mobile;
+    row-gap: $grid-row-gap-mobile;
   }
 }
 

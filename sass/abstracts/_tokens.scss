@@ -208,7 +208,12 @@ $grid-columns-desktop: 12;
 $grid-columns-tablet: 12;
 $grid-columns-mobile: 12;
 
-// grid gap on different screens
+// grid column gap on different screens
 $grid-column-gap-desktop: 1rem;
 $grid-column-gap-tablet: 1rem;
 $grid-column-gap-mobile: 1rem;
+
+// grid row gap on different screens
+$grid-row-gap-desktop: 1rem;
+$grid-row-gap-tablet: 1rem;
+$grid-row-gap-mobile: 1rem;
