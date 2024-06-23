@@ -8,5 +8,6 @@
     font-family: $footer-link-font-family
     letter-spacing: $letter-spacing-loose
 
-    &:is(:hover, :focus)
-      color: $footer-link-color-hover
+    +can-hover
+      &:is(:hover, :focus)
+        color: $footer-link-color-hover

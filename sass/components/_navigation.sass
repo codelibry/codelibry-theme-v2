@@ -8,5 +8,6 @@
     color: $navigation-color
     text-decoration: $navigation-link-text-decoration
 
-    &:is(:hover, :focus)
-      color: $navigation-color-hover
+    +can-hover
+      &:is(:hover, :focus)
+        color: $navigation-color-hover
