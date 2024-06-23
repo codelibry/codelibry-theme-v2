@@ -25,7 +25,7 @@ const precision = 10;
 // JS Vendor options.
 
 // Path to JS vendor folder.
-const jsVendorSRC = "./js/vendor/*.js";
+const jsVendorSRC = "./js/vendor/**/*.js";
 
 // Path to place the compiled JS vendors file.
 const jsVendorDestination = "./dist/";
@@ -36,7 +36,7 @@ const jsVendorFile = "vendor";
 // JS Custom options.
 
 // Path to JS custom scripts folder.
-const jsCustomSRC = "./js/custom/*.js";
+const jsCustomSRC = "./js/custom/**/*.js";
 
 // Path to place the compiled JS custom scripts file.
 const jsCustomDestination = "./dist/";
@@ -56,13 +56,13 @@ const imgDST = "./assets/images/";
 
 // >>>>> Watch files paths.
 // Path to all *.sass files inside css folder and inside them.
-const watchStyles = "./sass/**/*.sass";
+const watchStyles = "./sass/**/*.{sass,scss}";
 
 // Path to all vendor JS files.
-const watchJsVendor = "./js/vendor/*.js";
+const watchJsVendor = "./js/vendor/**/*.js";
 
 // Path to all custom JS files.
-const watchJsCustom = "./js/custom/*.js";
+const watchJsCustom = "./js/custom/**/*.js";
 
 // Path to all PHP files.
 const watchPhp = "./**/*.php";
