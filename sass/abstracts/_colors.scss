@@ -165,17 +165,6 @@ $light: (
     "900": $-clr-gray-900,
     "1000": $-clr-black,
   ),
-  "accent": (
-    "100": $-clr-deeppink-100,
-    "200": $-clr-deeppink-200,
-    "300": $-clr-deeppink-300,
-    "400": $-clr-deeppink-400,
-    "500": $-clr-deeppink-500,
-    "600": $-clr-deeppink-600,
-    "700": $-clr-deeppink-700,
-    "800": $-clr-deeppink-800,
-    "900": $-clr-deeppink-900,
-  ),
   "primary": (
     "100": $-clr-skyblue-100,
     "200": $-clr-skyblue-200,
@@ -186,6 +175,17 @@ $light: (
     "700": $-clr-skyblue-700,
     "800": $-clr-skyblue-800,
     "900": $-clr-skyblue-900,
+  ),
+  "accent": (
+    "100": $-clr-deeppink-100,
+    "200": $-clr-deeppink-200,
+    "300": $-clr-deeppink-300,
+    "400": $-clr-deeppink-400,
+    "500": $-clr-deeppink-500,
+    "600": $-clr-deeppink-600,
+    "700": $-clr-deeppink-700,
+    "800": $-clr-deeppink-800,
+    "900": $-clr-deeppink-900,
   ),
 );
 
@@ -203,17 +203,6 @@ $dark: (
     "100": $-clr-gray-900,
     "000": $-clr-black,
   ),
-  "accent": (
-    "900": $-clr-deeppink-900,
-    "800": $-clr-deeppink-800,
-    "700": $-clr-deeppink-700,
-    "600": $-clr-deeppink-600,
-    "500": $-clr-deeppink-500,
-    "400": $-clr-deeppink-400,
-    "300": $-clr-deeppink-300,
-    "200": $-clr-deeppink-200,
-    "100": $-clr-deeppink-100,
-  ),
   "primary": (
     "900": $-clr-skyblue-900,
     "800": $-clr-skyblue-800,
@@ -224,6 +213,17 @@ $dark: (
     "300": $-clr-skyblue-300,
     "200": $-clr-skyblue-200,
     "100": $-clr-skyblue-100,
+  ),
+  "accent": (
+    "900": $-clr-deeppink-900,
+    "800": $-clr-deeppink-800,
+    "700": $-clr-deeppink-700,
+    "600": $-clr-deeppink-600,
+    "500": $-clr-deeppink-500,
+    "400": $-clr-deeppink-400,
+    "300": $-clr-deeppink-300,
+    "200": $-clr-deeppink-200,
+    "100": $-clr-deeppink-100,
   ),
 );
 
