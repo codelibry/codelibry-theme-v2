@@ -204,16 +204,19 @@ $form-group-spacing: 0.5rem;
  * Grid Layout (Like Bootstrap)
  */
 // columns count on different screens
-$grid-columns-desktop: 12;
-$grid-columns-tablet: 12;
-$grid-columns-mobile: 12;
+$grid-columns-default: 12;
+$grid-columns-large: 8;
+$grid-columns-medium: 8;
+$grid-columns-small: 4;
 
 // grid column gap on different screens
-$grid-column-gap-desktop: 1rem;
-$grid-column-gap-tablet: 1rem;
-$grid-column-gap-mobile: 1rem;
+$grid-column-gap-default: 1rem;
+$grid-column-gap-large: 1rem;
+$grid-column-gap-medium: 1rem;
+$grid-column-gap-small: 1rem;
 
 // grid row gap on different screens
-$grid-row-gap-desktop: 1rem;
-$grid-row-gap-tablet: 1rem;
-$grid-row-gap-mobile: 1rem;
+$grid-row-gap-default: 1rem;
+$grid-row-gap-large: 1rem;
+$grid-row-gap-medium: 1rem;
+$grid-row-gap-small: 1rem;
