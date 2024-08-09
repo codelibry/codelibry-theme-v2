@@ -28,4 +28,12 @@
       }
     }
   }
+
+  // GLOBAL SITE ZOOM 
+  $base-font-size: 16;
+  $min-font-size: 12;
+
+  @include min-screen(large) {
+    @include adaptive-value("font-size", #{$base-font-size}, #{$min-font-size}, 1);
+  }
 }
