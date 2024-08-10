@@ -28,10 +28,26 @@ function codelibry_enqueue () {
 
   }
 
-  wp_enqueue_style( 'main', "{$DIST}/main.min.css", array(), $style_version, 'all' ); // main css
-  wp_enqueue_script( 'vendor', "{$DIST}/vendor.min.js", array('jquery'), $vendor_version, true ); // vendor js
-  wp_enqueue_script( 'main', "{$DIST}/main.min.js", array('vendor'), $custom_version, true ); // main js
+  /*
+   * Styles
+   */
+  wp_enqueue_style( 'main', "{$DIST}/main.min.css", array(), $style_version, 'all' );
 
+  /*
+   * JavaScript Libraries
+   */
+  wp_enqueue_script( 'gsap', "{$DIST}/lib/gsap.min.js", array(), '3.12', true);
+  wp_enqueue_script( 'scroll-trigger', "{$DIST}/lib/ScrollTrigger.min.js", array('gsap'), '3.12', true);
+
+  /*
+   * Local JavaScript
+   */
+  wp_enqueue_script( 'vendor', "{$DIST}/vendor.min.js", array('jquery', 'scroll-trigger'), $vendor_version, true );
+  wp_enqueue_script( 'main', "{$DIST}/main.min.js", array('vendor'), $custom_version, true );
+
+  /*
+   * Passing PHP variables to JavaScript
+   */
   wp_localize_script( 'main', 'codelibry',
     array( 
       'ajax_url' => admin_url( 'admin-ajax.php' ),
