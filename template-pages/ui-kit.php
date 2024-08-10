@@ -8,12 +8,15 @@ Template Name: Ui Kit
 
 <main class="ui-kit">
 
-<?php get_template_part('/template-parts/ui/colors'); ?>
+  <div class="container">
 
-<?php get_template_part('/template-parts/ui/typography'); ?>
+    <?php get_template_part('/template-parts/ui-kit/colors'); ?>
 
-<?php get_template_part('/template-parts/ui/buttons'); ?>
+    <?php get_template_part('/template-parts/ui-kit/typography'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/buttons'); ?>
+
+  </div>
 </main>
 
 <?php get_footer(); ?>

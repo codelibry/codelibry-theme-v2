@@ -1,7 +1,7 @@
 :root {
   @each $color, $shade-map in $active-theme {
     @each $shade, $value in $shade-map {
-      --#{$color}-#{$shade}: #{$value};
+      --clr-#{$color}-#{$shade}: #{$value};
     }
   }
 
@@ -9,7 +9,7 @@
     @media (prefers-color-scheme: dark) {
       @each $color, $shade-map in $dark {
         @each $shade, $value in $shade-map {
-          --#{$color}-#{$shade}: #{$value};
+          --clr-#{$color}-#{$shade}: #{$value};
         }
       }
     }
