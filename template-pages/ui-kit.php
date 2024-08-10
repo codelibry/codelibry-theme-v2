@@ -16,6 +16,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/buttons'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/cards'); ?>
+
   </div>
 </main>
 
