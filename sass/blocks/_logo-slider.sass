@@ -1,13 +1,15 @@
 .logo-slider
   .swiper-wrapper
-    transition-timing-function : linear
+    transition-timing-function : $logo-slider-transition-function
 
   .container
-    overflow-x: hidden
+    overflow-x: $logo-slider-overflow-x
 
   .swiper-slide
-    width: rem(350)
-    height: rem(120)
+    width: $logo-slider-slide-width
+    height: $logo-slider-slide-height
 
     img
-      @include image-contain
+      width: 100%
+      height: 100%
+      object-fit: $logo-slider-slide-image-fit

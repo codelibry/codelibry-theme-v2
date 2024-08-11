@@ -1,16 +1,19 @@
 @mixin heading(
   $font-size,
+  $color: $heading-color-default,
   $line-height: $heading-line-height,
-  $font-family: $heading-font-family
+  $font-family: $heading-font-family,
+  $text-transform: $heading-text-transform,
+  $letter-spacing: $heading-letter-spacing,
+  $font-weight: $heading-font-weight
 ) {
   font-size: $font-size;
+  color: $color;
   font-family: $font-family;
   line-height: $line-height;
-
-  color: $heading-color-default;
-  text-transform: $heading-text-transform;
-  letter-spacing: $heading-letter-spacing;
-  font-weight: $heading-font-weight;
+  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
+  font-weight: $font-weight;
 }
 
 @mixin max-screen($size) {

@@ -52,16 +52,30 @@ $body-background-color: $color-background-default;
 $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
+
 /*
- * Heading
+ * Default Gaps
  */
+$grid-gap: $size-16;
+$flex-group-gap: $size-16;
+
+/*
+ * Section
+ */
+$section-padding-block: clamp(5rem, 10vh, 6rem);
+
+
+// ===============================
+// Headings - components/headings
+// ===============================
+
 // heading general
 $heading-font-family: $font-family-accent;
 $heading-color-default: $color-neutral-900;
 $heading-font-weight: $font-weight-bold;
 $heading-letter-spacing: $letter-spacing-loose;
-$heading-line-height: 1.1;
 $heading-text-transform: uppercase;
+$heading-line-height: 1.1;
 
 // heading 1
 $heading-1-font-size: $font-size-900;
@@ -75,28 +89,31 @@ $heading-2-color: $heading-color-default;
 $heading-3-font-size: $font-size-700;
 $heading-3-color: $heading-color-default;
 
-/*
- * Default Gaps
- */
-$grid-gap: $size-16;
-$flex-group-gap: $size-16;
+// heading 4
+$heading-4-font-size: $font-size-600;
+$heading-4-color: $heading-color-default;
 
-/*
- * Section
- */
-$section-padding-block: clamp(5rem, 10vh, 6rem);
+// heading 5
+$heading-5-font-size: $font-size-500;
+$heading-5-color: $heading-color-default;
 
-/*
- * Container
- */
+// heading 6
+$heading-6-font-size: $font-size-400;
+$heading-6-color: $heading-color-default;
+
+
+// ===============================
+//  Container - utilities/container
+// ===============================
 $container-min-margin-inline: $size-16;
 $container-max-width: 64rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
-/*
- * Site Header
- */
+
+// ===============================
+//  Site Header - components/site-header
+// ===============================
 $site-header-background-color: $color-primary-300;
 $site-header-color: $color-neutral-900;
 $site-header-padding: $size-32 0;
@@ -105,9 +122,10 @@ $site-header-jusitifcation-small-screens: center;
 $site-header-jusitifcation-large-screens: space-between;
 $site-header-alignment: center;
 
-/*
- * Navigation
- */
+
+// ===============================
+//  Navigation - components/navigation
+// ===============================
 $navigation-color: $site-header-color;
 $navigation-color-hover: $color-primary-300;
 $navigation-font-size: $font-size-400;
@@ -116,9 +134,10 @@ $navigation-link-text-decoration: none;
 $navigation-font-family: $body-font-family;
 $navigation-font-weight: $body-font-weight;
 
-/*
- * Site Footer
- */
+
+// ===============================
+//  Site Footer - components/site-footer
+// ===============================
 $footer-background-color: $color-primary-300;
 $footer-text-color: $color-primary-900;
 $footer-link-color: $color-neutral-100;
@@ -126,9 +145,11 @@ $footer-link-color-hover: $color-primary-200;
 $footer-link-font-family: $font-family-accent;
 $footer-link-text-decoration: none;
 
-/*
- * Button
- */
+
+// ===============================
+//  Buttons - components/buttons
+// ===============================
+
 // button general
 $button-font-family: $body-font-family;
 $button-font-size: $font-size-400;
@@ -154,9 +175,11 @@ $button-primary-background: $color-primary-700;
 $button-primary-color-hover: $color-neutral-100;
 $button-primary-background-hover: $color-primary-800;
 
-/*
- * Cards
- */
+
+// ===============================
+//    Cards - components/cards
+// ===============================
+
 // card general
 $card-flow-spacing: $size-16;
 $card-padding: $size-32;
@@ -171,9 +194,11 @@ $card-line-height: 1.25;
 $card-heading-color-default: $card-color-default;
 $card-heading-font-size: $font-size-600;
 
-/*
- * Forms 
- */
+
+// ===============================
+//    Forms - components/forms
+// ===============================
+
 // form label
 $form-label-color: $body-text-color;
 $form-label-font-family: $body-font-family;
@@ -200,23 +225,36 @@ $form-placeholder-font-size: $body-font-size;
 // form group
 $form-group-spacing: 0.5rem;
 
-/*
- * Grid Layout (Like Bootstrap)
- */
-// columns count on different screens
+
+// ===============================
+//    Grid Layout - layout/grid
+// ===============================
+
 $grid-columns-default: 12;
 $grid-columns-large: 8;
 $grid-columns-medium: 8;
 $grid-columns-small: 4;
 
-// grid column gap on different screens
 $grid-column-gap-default: 1rem;
 $grid-column-gap-large: 1rem;
 $grid-column-gap-medium: 1rem;
 $grid-column-gap-small: 1rem;
 
-// grid row gap on different screens
 $grid-row-gap-default: 1rem;
 $grid-row-gap-large: 1rem;
 $grid-row-gap-medium: 1rem;
 $grid-row-gap-small: 1rem;
+
+
+// ==============================
+//         Block Tokens
+// ==============================
+
+// ===============================
+// Logo Slider - blocks/logo-slider
+// ===============================
+$logo-slider-slide-width: rem(350);
+$logo-slider-slide-height: rem(120);
+$logo-slider-slide-image-fit: contain;
+$logo-slider-transition-function: linear;
+$logo-slider-overflow-x: hidden;
