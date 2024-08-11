@@ -1,9 +1,11 @@
+// ===================================================
+//                    THEME TOKENS
+// ===================================================
+
 $active-theme: $light;
 $enable-media-query-dark-mode: false;
 
-/*
- * General default colors
- */
+// General default colors
 $color-text-default: $color-neutral-700;
 $color-background-default: $color-primary-100;
 $color-text-interactive-default: $color-accent-400;
@@ -12,15 +14,19 @@ $color-text-interactive-hover: $color-accent-500;
 // set to 0 to disable
 $letter-spacing-loose: 0;
 
-/*
- * Border Radius
- */
+
+// ===============================
+//  Border Radius - utilities/border-radius
+// ===============================
+
 $border-radius-1: $size-16;
 $border-radius-2: $size-32;
 
-/*
- * Box Shadow
- */
+
+// ===============================
+//  Box Shadow - utilities/box-shadow
+// ===============================
+
 $box-shadow-1: 0px 6px 5px rgba(0, 0, 0, 0.012),
   0px 22px 18px rgba(0, 0, 0, 0.018), 0px 100px 80px rgba(0, 0, 0, 0.03);
 
@@ -36,9 +42,12 @@ $box-shadow-4: 0px 6px 5px rgba(0, 0, 0, 0.03),
 $box-shadow-5: 0px 6px 5px rgba(0, 0, 0, 0.04),
   0px 22px 18px rgba(0, 0, 0, 0.06), 0px 100px 80px rgba(0, 0, 0, 0.1);
 
-/*
- * Body
- */
+
+// ===============================
+//     General - base/general
+// ===============================
+
+// body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
 $body-line-height: 1.5;
@@ -46,23 +55,16 @@ $body-font-weight: $font-weight-default;
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
 
-/*
- * Links
- */
+// links
 $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
-
-/*
- * Default Gaps
- */
+// gaps
 $grid-gap: $size-16;
 $flex-group-gap: $size-16;
 
-/*
- * Section
- */
-$section-padding-block: clamp(5rem, 10vh, 6rem);
+// section
+$section-padding-block: rem(80);
 
 
 // ===============================
@@ -105,6 +107,7 @@ $heading-6-color: $heading-color-default;
 // ===============================
 //  Container - utilities/container
 // ===============================
+
 $container-min-margin-inline: $size-16;
 $container-max-width: 64rem;
 $container-max-width-narrow: 40rem;
@@ -114,6 +117,7 @@ $container-max-width-wide: 75rem;
 // ===============================
 //  Site Header - components/site-header
 // ===============================
+
 $site-header-background-color: $color-primary-300;
 $site-header-color: $color-neutral-900;
 $site-header-padding: $size-32 0;
@@ -126,6 +130,7 @@ $site-header-alignment: center;
 // ===============================
 //  Navigation - components/navigation
 // ===============================
+
 $navigation-color: $site-header-color;
 $navigation-color-hover: $color-primary-300;
 $navigation-font-size: $font-size-400;
@@ -138,6 +143,7 @@ $navigation-font-weight: $body-font-weight;
 // ===============================
 //  Site Footer - components/site-footer
 // ===============================
+
 $footer-background-color: $color-primary-300;
 $footer-text-color: $color-primary-900;
 $footer-link-color: $color-neutral-100;
@@ -246,13 +252,10 @@ $grid-row-gap-medium: 1rem;
 $grid-row-gap-small: 1rem;
 
 
-// ==============================
-//         Block Tokens
-// ==============================
-
 // ===============================
 // Logo Slider - blocks/logo-slider
 // ===============================
+
 $logo-slider-slide-width: rem(350);
 $logo-slider-slide-height: rem(120);
 $logo-slider-slide-image-fit: contain;
