@@ -166,8 +166,10 @@ $button-border: 0;
 $button-border-radius: $border-radius-1;
 
 // button default
+$button-default-color: $color-primary-400;
 $button-default-background: transparent;
-$button-default-hover-background: $color-neutral-100;
+$button-default-color-hover: $color-primary-600;
+$button-default-background-hover: transparent;
 
 // button accent
 $button-accent-color: $color-neutral-100;

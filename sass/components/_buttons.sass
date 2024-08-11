@@ -9,14 +9,17 @@
   text-transform: $button-text-transform
   font-weight: $button-font-weight
   padding: $button-padding
-  background-color: $button-default-background
   border: $button-border
   border-radius: $button-border-radius
   transition: 275ms ease
 
+  background-color: $button-default-background
+  color: $button-default-color
+
   +can-hover
     &:is(:hover, :focus)
-      background-color: $button-default-hover-background
+      background-color: $button-default-background-hover
+      color: $button-default-color-hover
 
   &--accent
     background-color: $button-accent-background
