@@ -143,15 +143,17 @@ function posts_by_title($where, $query)
 add_filter('posts_where', 'posts_by_title', 10, 2);
 
 
-/**
-* Responsive Image Helper Function
-*
-* @param string $image_id the id of the image (from ACF or similar)
-* @param string $image_size the size of the thumbnail image or custom image size
-* @param string $max_width the max width this image will be shown to build the sizes attribute 
-*/
+function get_img_src(string $image_name): string {
+  return get_template_directory_uri() . '/assets/images/' . $image_name;
+}
 
-function awesome_acf_responsive_image($image_id, $image_size, $max_width){
+
+function img_src(string $image_name): void {
+  echo 'src="' . get_img_src($image_name) . '"';
+}
+
+
+function acf_image_src($image_id, $max_width = "100%", $image_size = "full"){
 
   // check the image ID is not blank
   if($image_id != '') {
@@ -163,52 +165,41 @@ function awesome_acf_responsive_image($image_id, $image_size, $max_width){
     $image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
 
     // generate the markup for the responsive image
-    echo 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+    return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
 
   }
 }
 
 
-/* img_src HELPER TO WRITE LESS CODE
- *
- * Instead: <img src="<?php echo get_template_directory_uri() . '/assets/images/image.png' ?>" />
- * Use: <img <?php img_src('image.png') ?> />
- */
-
-function img_src(string $image_name): void {
-  echo 'src="' . get_img_src($image_name) . '"';
+function acf_image_attrs($image) {
+  if(is_int($image)){
+    echo acf_image_src($image) . ' alt="' . get_the_title($image) . '"';
+  } else {
+    $url = $image['url'];
+    $alt = $image['alt'] ? $image['alt'] : $image['title'];
+    echo 'src="' . esc_url($url) . '" alt="' . esc_attr($alt) . '"';
+  }
 }
 
-function get_img_src(string $image_name): string {
-  return get_template_directory_uri() . '/assets/images/' . $image_name;
-}
-
-
-/* ACF HELPERS TO WRITE LESS CODE
- *
- * @param array $image - Image Array from acf Image field
- * @param array $link - Link Array from acf Link field
- *
- * Usage:
- *
- * $image = get_field('image');
- * $link = get_field('link');
- *
- * Image Instead: <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?? $image['title'] ?>" />
- * Use: <img <?php acf_image_attrs($image) ?> />
- *
- * Link Instead: <a href="<?php echo $link['url'] ?>" target="<?php echo $link['target'] ?? '_self' ?>"><?php echo $link['title'] ?></a>
- * Use: <a <?php acf_link_attrs($link) ?>><?php echo $link['title']</a>
- */
-
-function acf_image_attrs(array $image) {
-  $url = $image['url'];
-  $alt = $image['alt'] ? $image['alt'] : $image['title'];
-  echo 'src="' . esc_url($url) . '" alt="' . esc_attr($alt) . '"';
-}
 
 function acf_link_attrs(array $link) {
   $url = $link['url'];
   $target = $link['target'] ? $link['target'] : '_self';
   echo 'href="' . esc_url($url) . '" target="' . esc_attr($target) . '"';
 }
+
+
+function def_prop($array, $key, $default = false)
+{
+  return isset($array[$key]) && !empty($array[$key])
+    ? $array[$key]
+    : $default;
+}
+
+function my_log($value)
+{
+  echo "<pre>";
+  print_r($value);
+  wp_die();
+}
+
