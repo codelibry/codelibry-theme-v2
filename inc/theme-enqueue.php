@@ -13,11 +13,11 @@ function codelibry_enqueue () {
 
   $ABSOLUTE_DIST = get_template_directory() . '/dist'; // Absolute path to the dist folder
   $DIST = get_template_directory_uri() . '/dist'; // Dir to the dist theme folder
+  $LIB = get_template_directory_uri() . '/lib'; // Dir to the lib theme folder
 
   if($DEVELOPMENT) {
     
     $style_version = filemtime( "{$ABSOLUTE_DIST}/main.min.css" );
-    $vendor_version = filemtime( "{$ABSOLUTE_DIST}/vendor.min.js" );
     $custom_version = filemtime( "{$ABSOLUTE_DIST}/main.min.js" );
 
   } else {
@@ -28,26 +28,34 @@ function codelibry_enqueue () {
 
   }
 
-  /*
-   * Styles
-   */
+
+  /* Styles */
+
   wp_enqueue_style( 'main', "{$DIST}/main.min.css", array(), $style_version, 'all' );
 
-  /*
-   * JavaScript Libraries
-   */
-  wp_enqueue_script( 'gsap', "{$DIST}/lib/gsap.min.js", array(), '3.12', true);
-  wp_enqueue_script( 'scroll-trigger', "{$DIST}/lib/ScrollTrigger.min.js", array('gsap'), '3.12', true);
 
-  /*
-   * Local JavaScript
-   */
-  wp_enqueue_script( 'vendor', "{$DIST}/vendor.min.js", array('jquery', 'scroll-trigger'), $vendor_version, true );
-  wp_enqueue_script( 'main', "{$DIST}/main.min.js", array('vendor'), $custom_version, true );
+  /* JavaScript */
 
-  /*
-   * Passing PHP variables to JavaScript
-   */
+  // Lenis Smooth Scroll: https://github.com/darkroomengineering/lenis 
+  wp_enqueue_script( 'lenis', "{$LIB}/lenis.js", array(), '1.0.0', true );
+
+  // Swiper Slider: https://swiperjs.com/get-started
+  wp_enqueue_script( 'swiper', "{$LIB}/swiper.js", array(), '1.0.0', true );
+
+  // GSAP: https://gsap.com
+  wp_enqueue_script( 'gsap', "{$LIB}/gsap.js", array(), '1.0.0', true );
+
+  // GSAP Scroll Trigger (GSAP Plugin): https://gsap.com/docs/v3/Plugins/ScrollTrigger
+  wp_enqueue_script( 'scroll-trigger', "{$LIB}/scroll-trigger.js", array('gsap'), '1.0.0', true );
+
+  // Our Custom JavaScript (should depend on libaries above)
+  wp_enqueue_script( 'main', "{$DIST}/main.min.js", array(
+    'jquery', 'gsap', 'scroll-trigger', 'lenis'
+  ), $custom_version, true );
+
+
+  /* Passing PHP variables to JavaScript */
+
   wp_localize_script( 'main', 'codelibry',
     array( 
       'ajax_url' => admin_url( 'admin-ajax.php' ),
@@ -56,6 +64,7 @@ function codelibry_enqueue () {
       'theme_url' => get_template_directory_uri()
     )
   );
+
 }
 
 add_action('wp_enqueue_scripts', 'codelibry_enqueue');
