@@ -22,6 +22,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/tabs'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/popups'); ?>
+
   </div>
 </main>
 
