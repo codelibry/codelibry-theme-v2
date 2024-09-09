@@ -51,14 +51,14 @@
 // create all grid column classes for large
 @for $i from 1 through $grid-columns-large {
   @include max-screen(large) {
-    .col-md-#{$i} {
+    .col-lg-#{$i} {
       grid-column: span #{$i};
     }
 
     // create all grid column offset classes for large
     @for $j from 1 through $grid-columns-large - $i {
       @if $i < $grid-columns-large {
-        .col-md-#{$i}-offset-#{$j} {
+        .col-lg-#{$i}-offset-#{$j} {
           display: flex;
           grid-column-start: #{$j + 1};
           grid-column-end: #{$i + $j + 1};
