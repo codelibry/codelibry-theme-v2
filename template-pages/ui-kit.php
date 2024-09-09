@@ -20,6 +20,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/accordions'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/tabs'); ?>
+
   </div>
 </main>
 

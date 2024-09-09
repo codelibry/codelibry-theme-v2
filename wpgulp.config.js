@@ -62,7 +62,7 @@ const watchStyles = "./sass/**/*.{sass,scss}";
 const watchJsVendor = "./js/vendor/**/*.js";
 
 // Path to all custom JS files.
-const watchJsCustom = "./js/custom/**/*.js";
+const watchJsCustom = "./js/**/*.js";
 
 // Path to all PHP files.
 const watchPhp = "./**/*.php";

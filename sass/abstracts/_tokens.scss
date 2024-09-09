@@ -247,6 +247,18 @@ $accordion-transition: 0.3s ease;
 
 
 // ===============================
+//  Tabs - components/tabs
+// ===============================
+
+$tabs-background: $color-neutral-000;
+$tabs-background-hover: $color-neutral-100;
+$tabs-buttons-gap: $size-4;
+$tabs-button-padding: $size-4 $size-8;
+$tabs-panel-padding: $size-20 $size-12;
+
+$tabs-border: 1px solid $color-neutral-900;
+
+// ===============================
 //    Grid Layout - layout/grid
 // ===============================
 
