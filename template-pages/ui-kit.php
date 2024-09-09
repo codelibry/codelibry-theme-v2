@@ -18,6 +18,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/cards'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/accordions'); ?>
+
   </div>
 </main>
 
