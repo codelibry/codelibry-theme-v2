@@ -7,7 +7,7 @@
 
     <div class="col-4">
       <details class="accordion">
-        <summary>
+        <summary class="accordion__button">
           <h6 class="heading-6">
             Accordion Title #1
           </h6>
@@ -25,7 +25,7 @@
 
     <div class="col-4">
       <details class="accordion">
-        <summary>
+        <summary class="accordion__button">
           <h6 class="heading-6">
             Accordion Title #2
           </h6>
