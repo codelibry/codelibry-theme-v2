@@ -1,6 +1,6 @@
 <section class="ui-kit-popups | section">
   <h1 class="heading-1">
-    Popups
+    Popups <a href="https://blog.webdevsimplified.com/2023-04/html-dialog/">Reference</a>
   </h1>
 
   <div class="flex-group | mt-16">
