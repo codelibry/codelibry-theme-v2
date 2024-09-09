@@ -1,6 +1,6 @@
 <section class="ui-kit-tabs | section">
   <h1 class="heading-1">
-    Tabs
+    Tabs <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/">Reference</a>
   </h1>
 
   <div role="tablist" aria-labelledby="tablist-1" class="automatic">

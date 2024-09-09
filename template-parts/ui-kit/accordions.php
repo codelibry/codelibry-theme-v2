@@ -1,6 +1,6 @@
 <section class="ui-kit-accordions | section">
   <h1 class="heading-1">
-    Accordions
+    Accordions <a href="https://css-tricks.com/how-to-animate-the-details-element/">Reference</a>
   </h1>
 
   <div class="row | mt-16">
