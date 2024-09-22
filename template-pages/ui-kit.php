@@ -24,6 +24,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/popups'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/checkboxes'); ?>
+
   </div>
 </main>
 

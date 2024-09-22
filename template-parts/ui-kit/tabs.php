@@ -3,7 +3,7 @@
     Tabs <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/">Reference</a>
   </h1>
 
-  <div role="tablist" aria-labelledby="tablist-1" class="automatic">
+  <div role="tablist" aria-labelledby="tablist-1" class="automatic mt-16">
     <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
       <span class="focus">Maria Ahlefeldt</span>
     </button>

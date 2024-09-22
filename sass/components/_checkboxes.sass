@@ -1,0 +1,38 @@
+input[type="checkbox"]
+  -webkit-appearance: none
+  appearance: none
+  margin: 0
+  background-color: $form-checkbox-background-color
+
+  font: inherit
+  color: currentColor
+  width: $form-checkbox-size
+  height: $form-checkbox-size
+  border: $form-checkbox-border
+  border-radius: $form-checkbox-border-radius
+
+  display: grid
+  place-content: center
+
+  &::before
+    content: ""
+    width: 0.8em
+    height: 0.8em
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%)
+    transform: scale(0)
+    transform-origin: bottom left
+    transition: 120ms transform ease-in-out
+    box-shadow: inset 1em 1em $color-primary-400
+    // Windows High Contrast Mode
+    background-color: CanvasText
+
+  &:checked::before
+    transform: scale(1)
+
+  &:focus
+    outline: $form-control-focus-outline
+    outline-offset: $form-control-focus-outline-offset
+
+  &:disabled
+    color: $form-control-disabled-color
+    cursor: not-allowed

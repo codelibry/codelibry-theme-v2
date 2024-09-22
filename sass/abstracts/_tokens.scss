@@ -235,6 +235,30 @@ $form-group-spacing: 0.5rem;
 
 
 // ===============================
+// Form Control - components/form-control
+// ===============================
+$form-control-font-size: $body-font-size;
+$form-control-font-weight: $body-font-weight;
+$form-control-line-height: $body-line-height;
+$form-control-gap: $size-8;
+$form-control-color: $color-primary-400;
+$form-control-disabled-color: $color-neutral-300;
+
+// outline on focus style
+$form-control-focus-outline: calc(max(2px, 0.15em)) solid currentColor;
+$form-control-focus-outline-offset: calc(max(2px, 0.15em));
+
+
+// ===============================
+// Checkboxes - components/checkboxes
+// ===============================
+$form-checkbox-background-color: transparent;
+$form-checkbox-size: 0.1em;
+$form-checkbox-border: 0.1em solid currentColor;
+$form-checkbox-border-radius: 0.15em;
+
+
+// ===============================
 //  Accordions - components/accordions
 // ===============================
 
