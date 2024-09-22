@@ -26,6 +26,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/checkboxes'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/radio-buttons'); ?>
+
   </div>
 </main>
 

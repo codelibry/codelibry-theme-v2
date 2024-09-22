@@ -237,6 +237,7 @@ $form-group-spacing: 0.5rem;
 // ===============================
 // Form Control - components/form-control
 // ===============================
+
 $form-control-font-size: $body-font-size;
 $form-control-font-weight: $body-font-weight;
 $form-control-line-height: $body-line-height;
@@ -244,18 +245,33 @@ $form-control-gap: $size-8;
 $form-control-color: $color-primary-400;
 $form-control-disabled-color: $color-neutral-300;
 
+$form-control-background-color: $color-neutral-000;
+$form-control-border-radius: $size-8;
+$form-control-border: 1px solid $color-neutral-900;
+$form-control-size: $size-16;
+
 // outline on focus style
 $form-control-focus-outline: calc(max(2px, 0.15em)) solid currentColor;
 $form-control-focus-outline-offset: calc(max(2px, 0.15em));
 
 
 // ===============================
-// Checkboxes - components/checkboxes
+// Checkboxes - components/checkboxes (inherits form-control)
 // ===============================
-$form-checkbox-background-color: transparent;
-$form-checkbox-size: 0.1em;
-$form-checkbox-border: 0.1em solid currentColor;
-$form-checkbox-border-radius: 0.15em;
+
+$form-checkbox-background-color: $form-control-background-color;
+$form-checkbox-border-radius: $form-control-border-radius;
+$form-checkbox-border: $form-control-border;
+$form-checkbox-size: $form-control-size;
+
+
+// ===============================
+// Radio-Buttons - components/radio-buttons (inherits form-control)
+// ===============================
+
+$form-radio-background-color: $form-control-background-color;
+$form-radio-border: $form-control-border;
+$form-radio-size: $form-control-size;
 
 
 // ===============================
