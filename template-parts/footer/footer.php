@@ -1,4 +1,4 @@
-<footer class="site-footer | py-800">
+<footer class="site-footer | py-800" id="footer">
   <div class="container">
     <nav aria-label="primary navigation">
       <ul class="nav | flex-group mx-auto">

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="page">
+<main class="page" id="main">
 
 <style>
   .box {
