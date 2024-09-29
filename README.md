@@ -1,23 +1,25 @@
 # Codelibry Starter Template (SASS Folder)
 
-The Sass directory is organized into several subdirectories, each serving a specific purpose in the development of your WordPress project. 
+The Sass directory is organized into several subdirectories, 
+each serving a specific purpose in the development of your WordPress project. 
 
-- 📁**`sass`** 
-    - 📁**`abstracts`**     - contains Sass tools like variables and mixins.
-    - 📁**`base`**          - holds foundational styles and resets.
-    - 📁**`blocks`**        - styles for specific website sections.
-    - 📁**`components`**    - ui-component styles (e.g., buttons, cards).
-    - 📁**`layout`**        - layout-related styles (e.g., grids, headers).
-    - 📁**`pages`**         - page-specific styles.
-    - 📁**`utilities`**     - utility classes for margins, paddings, etc.
-    - 📁**`vendor`**        - third-party CSS styles.
-    - 📄**`main.sass`**     - main entry point for compiling Sass files.
+- 📁`sass` 
+    - 📁`abstracts`     - contains Sass tools like variables and mixins.
+    - 📁`base`          - holds foundational styles and resets.
+    - 📁`blocks`        - styles for specific website sections.
+    - 📁`components`    - ui-component styles (e.g., buttons, cards).
+    - 📁`layout`        - layout-related styles (e.g., grids, headers).
+    - 📁`pages`         - page-specific styles.
+    - 📁`utilities`     - utility classes for margins, paddings, etc.
+    - 📁`vendor`        - third-party CSS styles.
+    - 📄`main.sass`     - main entry point for compiling Sass files.
 
 
 
 ## `abstracts/_breakpoints.scss`
 
-This file defines the `$breakpoints` map used for responsive design in your project. It specifies the following breakpoints:
+This file defines the `$breakpoints` map used for responsive design in your project. 
+It specifies the following breakpoints:
 
 ```scss
 $breakpoints: (
@@ -25,6 +27,7 @@ $breakpoints: (
   medium: 45em,
   large: 65em,
 );
+```
 
 
 ## `abstracts/_colors.scss`
