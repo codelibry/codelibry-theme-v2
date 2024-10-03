@@ -213,6 +213,12 @@ $form-label-font-size: $body-font-size;
 $form-label-font-weight: $body-font-weight;
 $form-label-font-family: $body-font-family;
 
+// error form label
+$error-form-label-color: red;
+$error-form-label-font-size: $body-font-size;
+$error-form-label-font-weight: $body-font-weight;
+$error-form-label-font-family: $body-font-family;
+
 // form input
 $form-input-color: $body-text-color;
 $form-input-font-size: $body-font-size;
@@ -295,6 +301,25 @@ $form-text-field-placeholder-color: $form-placeholder-color;
 $form-text-field-placeholder-font-family: $form-placeholder-font-family;
 $form-text-field-placeholder-font-weight: $form-placeholder-font-weight;
 $form-text-field-placeholder-font-size: $form-placeholder-font-size;
+
+
+// error form input
+$error-form-text-field-color: red;
+$error-form-text-field-font-family: $form-input-font-family;
+$error-form-text-field-font-weight: $form-input-font-weight;
+$error-form-text-field-font-size: $form-input-font-size;
+$error-form-text-field-background-color: $form-input-background-color;
+$error-form-text-field-border-default: 1px solid red;
+$error-form-text-field-border-focus: $form-input-border-focus;
+$error-form-text-field-padding: $form-input-padding;
+$error-form-text-field-border-radius: $form-input-border-radius;
+$error-form-text-field-gap: $size-8;
+
+// erro form placeholder
+$error-form-text-field-placeholder-color: red;
+$error-form-text-field-placeholder-font-family: $form-placeholder-font-family;
+$error-form-text-field-placeholder-font-weight: $form-placeholder-font-weight;
+$error-form-text-field-placeholder-font-size: $form-placeholder-font-size;
 
 
 // ===============================

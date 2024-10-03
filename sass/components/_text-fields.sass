@@ -9,21 +9,13 @@
     display: block
     width: 100%
 
-  &__input
-    color: $form-text-field-color
-    font-size: $form-text-field-font-size
-    font-weight: $form-text-field-font-weight
+  &__label
+    color: $form-label-color
+    font-family: $form-label-font-family
+    font-weight: $form-label-font-weight
+    font-size: $form-label-font-size
 
-    padding: $form-text-field-padding
-    border: $form-text-field-border-default
-    border-radius: $form-text-field-border-radius
-    background-color: $form-text-field-background-color
-
-    &::placeholder
-      color: $form-text-field-placeholder-color
-      font-weight: $form-text-field-placeholder-font-weight
-      font-family: $form-text-field-placeholder-font-family
-
+  &__input,
   &__textarea
     color: $form-text-field-color
     font-size: $form-text-field-font-size
@@ -38,3 +30,52 @@
       color: $form-text-field-placeholder-color
       font-weight: $form-text-field-placeholder-font-weight
       font-family: $form-text-field-placeholder-font-family
+
+
+  // Error State
+  &--error &__input,
+  &--error &__textarea
+    color: $error-form-text-field-color
+    font-size: $error-form-text-field-font-size
+    font-weight: $error-form-text-field-font-weight
+
+    padding: $error-form-text-field-padding
+    border: $error-form-text-field-border-default
+    border-radius: $error-form-text-field-border-radius
+    background-color: $error-form-text-field-background-color
+
+    &::placeholder
+      color: $error-form-text-field-placeholder-color
+      font-weight: $error-form-text-field-placeholder-font-weight
+      font-family: $error-form-text-field-placeholder-font-family
+
+  &--error &__label
+    color: $error-form-label-color
+    font-family: $error-form-label-font-family
+    font-weight: $error-form-label-font-weight
+    font-size: $error-form-label-font-size
+
+
+  // Focus State
+  &__input,
+  &__textarea
+    &:focus
+      color: $form-text-field-color
+      font-size: $form-text-field-font-size
+      font-weight: $form-text-field-font-weight
+
+      padding: $form-text-field-padding
+      border: $form-text-field-border-default
+      border-radius: $form-text-field-border-radius
+      background-color: $form-text-field-background-color
+
+      &::placeholder
+        color: $form-text-field-placeholder-color
+        font-weight: $form-text-field-placeholder-font-weight
+        font-family: $form-text-field-placeholder-font-family
+
+  &:has(*:focus) &__label
+    color: $form-label-color
+    font-family: $form-label-font-family
+    font-weight: $form-label-font-weight
+    font-size: $form-label-font-size

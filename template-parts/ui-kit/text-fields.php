@@ -8,13 +8,13 @@
       <div class="row">
         <div class="col-6 display-flex column g-16">
           <label class="text-field">
-            <span class="text-field__label">Input</span>
-            <input class="text-field__input" type="text" name="input-1" placeholder="Input..." />
+            <span class="text-field__label">Name</span>
+            <input class="text-field__input" type="text" name="name" placeholder="Name..." />
           </label>
 
-          <label class="text-field">
-            <span class="text-field__label">Input</span>
-            <input class="text-field__input" type="text" name="input-2" placeholder="Input..." />
+          <label class="text-field text-field--error">
+            <span class="text-field__label">Email</span>
+            <input class="text-field__input" type="email" name="email" placeholder="Email..." />
           </label>
         </div>
 
@@ -24,6 +24,10 @@
             <textarea class="text-field__textarea | height-full" placeholder="Textarea..."></textarea>
           </label>
         </div>
+      </div>
+
+      <div class="mt-16">
+        <input type="submit" value="Submit" class="button button--accent | display-inline-block"></input>
       </div>
     </form>
   </div>
