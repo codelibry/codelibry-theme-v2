@@ -9,12 +9,12 @@
         <div class="col-6 display-flex column g-16">
           <label class="text-field">
             <span class="text-field__label">Input</span>
-            <input class="text-field__input" type="text" name="input-1" placeholder="input..." />
+            <input class="text-field__input" type="text" name="input-1" placeholder="Input..." />
           </label>
 
           <label class="text-field">
             <span class="text-field__label">Input</span>
-            <input class="text-field__input" type="text" name="input-2" placeholder="input..." />
+            <input class="text-field__input" type="text" name="input-2" placeholder="Input..." />
           </label>
         </div>
 
