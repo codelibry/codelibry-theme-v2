@@ -1,0 +1,40 @@
+.text-field
+  display: flex
+  flex-direction: column
+  gap: $form-text-field-gap
+
+  &__label,
+  &__input,
+  &__textarea,
+    display: block
+    width: 100%
+
+  &__input
+    color: $form-text-field-color
+    font-size: $form-text-field-font-size
+    font-weight: $form-text-field-font-weight
+
+    padding: $form-text-field-padding
+    border: $form-text-field-border-default
+    border-radius: $form-text-field-border-radius
+    background-color: $form-text-field-background-color
+
+    &::placeholder
+      color: $form-text-field-placeholder-color
+      font-weight: $form-text-field-placeholder-font-weight
+      font-family: $form-text-field-placeholder-font-family
+
+  &__textarea
+    color: $form-text-field-color
+    font-size: $form-text-field-font-size
+    font-weight: $form-text-field-font-weight
+
+    padding: $form-text-field-padding
+    border: $form-text-field-border-default
+    border-radius: $form-text-field-border-radius
+    background-color: $form-text-field-background-color
+
+    &::placeholder
+      color: $form-text-field-placeholder-color
+      font-weight: $form-text-field-placeholder-font-weight
+      font-family: $form-text-field-placeholder-font-family

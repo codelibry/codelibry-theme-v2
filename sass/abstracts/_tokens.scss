@@ -215,14 +215,14 @@ $form-label-font-size: $body-font-size;
 
 // form input
 $form-input-color: $body-text-color;
-$form-input-font-family: $body-font-family;
-$form-input-font-weight: $font-weight-semi-bold;
 $form-input-font-size: $body-font-size;
-$form-input-background-color: $color-neutral-100;
-$form-input-border-default: 3px solid $color-primary-200;
-$form-input-border-focus: 3px solid $color-primary-400;
-$form-input-padding: $size-16;
+$form-input-font-family: $body-font-family;
+$form-input-font-weight: $body-font-weight;
+$form-input-background-color: $color-neutral-000;
+$form-input-border-default: 1px solid $color-neutral-900;
+$form-input-border-focus: 1px solid $color-neutral-800;
 $form-input-border-radius: $border-radius-1;
+$form-input-padding: $size-16;
 
 // form placeholder
 $form-placeholder-color: $color-primary-300;
@@ -246,8 +246,8 @@ $form-control-color: $color-primary-400;
 $form-control-disabled-color: $color-neutral-300;
 
 $form-control-background-color: $color-neutral-000;
-$form-control-border-radius: $size-8;
 $form-control-border: 1px solid $color-neutral-900;
+$form-control-border-radius: $border-radius-1;
 $form-control-size: $size-16;
 
 // outline on focus style
@@ -272,6 +272,29 @@ $form-checkbox-size: $form-control-size;
 $form-radio-background-color: $form-control-background-color;
 $form-radio-border: $form-control-border;
 $form-radio-size: $form-control-size;
+
+
+// ===============================
+// Text Field - components/text-fields (inherits forms)
+// ===============================
+
+// form input
+$form-text-field-color: $form-input-color;
+$form-text-field-font-family: $form-input-font-family;
+$form-text-field-font-weight: $form-input-font-weight;
+$form-text-field-font-size: $form-input-font-size;
+$form-text-field-background-color: $form-input-background-color;
+$form-text-field-border-default: $form-input-border-default;
+$form-text-field-border-focus: $form-input-border-focus;
+$form-text-field-padding: $form-input-padding;
+$form-text-field-border-radius: $form-input-border-radius;
+$form-text-field-gap: $size-8;
+
+// form placeholder
+$form-text-field-placeholder-color: $form-placeholder-color;
+$form-text-field-placeholder-font-family: $form-placeholder-font-family;
+$form-text-field-placeholder-font-weight: $form-placeholder-font-weight;
+$form-text-field-placeholder-font-size: $form-placeholder-font-size;
 
 
 // ===============================

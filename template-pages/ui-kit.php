@@ -28,6 +28,8 @@ Template Name: Ui Kit
 
     <?php get_template_part('/template-parts/ui-kit/radio-buttons'); ?>
 
+    <?php get_template_part('/template-parts/ui-kit/text-fields'); ?>
+
   </div>
 </main>
 
