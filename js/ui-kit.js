@@ -29,8 +29,12 @@ jQuery(function($){
     const colorName = key.replace('--clr-', '');
 
     colorsHTML += `
-      <div class="ui-color-box | ${bgClass}">
-        ${colorName}
+      <div class="ui-color-box">
+        <div class="ui-color-box__color | ${bgClass}">
+        </div>
+        <div class="ui-color-box__name">
+          ${colorName}
+        </div>
       </div>
     `;
   }
