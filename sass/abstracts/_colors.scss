@@ -1,4 +1,75 @@
-// global color tokens
+/*
+ * File Description:
+ *
+ * 1. First, you should take all the colors from the design template
+ * and put them the in private constants under "#global color tokens" section
+ *
+ * To make sass constant private just add prefix "-":
+ * Instead of "$clr-white" => "$-clr-white"
+ *
+ * We need to make them private to be sure, no developer will use them
+ * directly in our components or sections, only inside our color maps (see below)
+ *
+ * These constants should be named as the values, that are inside.
+ *
+ *
+ * 2. Second, you should put these global colors inside our color maps
+ * By default, we have two palettes: $light and $dark
+ * If you don't need $dark, just remove it
+ * 
+ * These maps are used inside base/_root.scss file to generate css variables
+ * for the light and dark themes accordingly
+ *
+ * --clr-#{$color}-#{$shade}: #{$value}
+ *
+ * When we have such map:
+ * $light: (
+ *   "neutral": (
+ *     "000": $-clr-white,
+ *   )
+ * )
+ * 
+ * It will be translated to such css variable: 
+ * --clr-neutral-000: #fff
+ *
+ * You can always check these variables inside </html>
+ * element in your browser console
+ *
+ *
+ * 3. Third, map generated css variables to sass constants
+ *
+ * It should be done like this:
+ * $color-neutral-000: var(--clr-neutral-000);
+ *
+ * Now, these constants will be used in our components
+ *
+ *
+ * Notes:
+ *
+ * 1) You can see your colors and their names in ui-kit page also.
+ * We have ui-kit.js to create colors grid using generated css variables.
+ *
+ * 2) Why name our variables "neutral", "primary" and "accent" instead of "white", "black", "red" etc?
+ * It will have much more sense in case these varialbes change their values.
+ * Also, the same variable could be both black or white depending on the current theme mode: light/dark
+ *
+ * 3) Why we use -100, -200, -300... instead of -1, -2, -3 for color suffixes?
+ * Imagine, we've already set up our color settings 
+ * and later during development find another primary color that cannot be fitted in our map.
+ * Now, we can put it between other two like so: color-primary-350
+ * This color will be lighter than color-primary-400 but darker than color-primary-300
+ *
+ * 4) color with -400 suffix should be the most common one
+ * -300, -200, -100 would be lighter
+ * -500, -600, -700... would be darker
+ *
+ * -000 suffix means the lightest possible
+ * -900 suffix means the darkest possible
+ *
+ */
+
+
+//#global color tokens
 $-clr-white: rgb(255, 255, 255);
 $-clr-gray-100: rgb(242, 242, 242);
 $-clr-gray-200: rgb(210, 210, 210);
@@ -151,6 +222,7 @@ $-clr-red-700: rgb(153, 46, 46);
 $-clr-red-800: rgb(102, 28, 28);
 $-clr-red-900: rgb(51, 12, 12);
 
+// #color maps
 $light: (
   "neutral": (
     "000": $-clr-white,
@@ -227,7 +299,7 @@ $dark: (
   ),
 );
 
-// contextual color tokens
+//#contextual color tokens
 $color-neutral-000: var(--clr-neutral-000);
 $color-neutral-100: var(--clr-neutral-100);
 $color-neutral-200: var(--clr-neutral-200);
