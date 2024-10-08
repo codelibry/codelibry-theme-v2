@@ -1,34 +1,34 @@
-/*
- * File Description:
- *
- * Logic is similar to the colors tokens
- *
- * Global tokens: they should not be used directly
- * $-ff-sans: system-ui, sans-serif;
- * $-ff-serif: serif;
- *
- * Contextual tokens: these constants can be used directly
- * $font-family-base: $-ff-sans;
- * $font-family-accent: $-ff-sans;
- *
- * $font-sizes map is used to generate css variables
- * in base/_root.scss in such format: --fs-#{$size-name}: #{$size-value}
- *
- * Then put css variables inside sass constants:
- * Example: $font-size-900: var(--fs-900)
- *
- * Then if we have:
- *
- * p {
- *   font-size: $font-size-800
- * }
- *
- * Then, this <p> element will have rem(48) size on large screen
- * and rem(36) size on small screen
- *
- * You can add additional breakpoints, if you have such need
- *
- */
+//
+// File Description:
+//
+// Logic is similar to the colors tokens
+//
+// Global tokens: they should not be used directly
+// $-ff-sans: system-ui, sans-serif;
+// $-ff-serif: serif;
+//
+// Contextual tokens: these constants can be used directly
+// $font-family-base: $-ff-sans;
+// $font-family-accent: $-ff-sans;
+//
+// $font-sizes map is used to generate css variables
+// in base/_root.scss in such format: --fs-#{$size-name}: #{$size-value}
+//
+// Then put css variables inside sass constants:
+// Example: $font-size-900: var(--fs-900)
+//
+// Then if we have:
+//
+// p {
+//   font-size: $font-size-800
+// }
+//
+// Then, this <p> element will have rem(48) size on large screen
+// and rem(36) size on small screen
+//
+// You can add additional breakpoints, if you have such need
+//
+//
 
 $-ff-sans: system-ui, sans-serif;
 $-ff-serif: serif;
