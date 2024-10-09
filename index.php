@@ -61,6 +61,34 @@
     ]
   ]);
 
+  // FAQ
+  get_template_part('blocks/faq', null, [
+    'title' => '<h2>FAQs</h2>',
+    'description' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>',
+    'faqs' => [
+      [
+        'title' => 'Lorem ipsum dolor sit amet',
+        'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>'
+      ],
+      [
+        'title' => 'Lorem ipsum dolor sit amet',
+        'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>'
+      ],
+      [
+        'title' => 'Lorem ipsum dolor sit amet',
+        'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>'
+      ],
+      [
+        'title' => 'Lorem ipsum dolor sit amet',
+        'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>'
+      ],
+      [
+        'title' => 'Lorem ipsum dolor sit amet',
+        'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>'
+      ],
+    ]
+  ]);
+
 ?>
 
 </main>
