@@ -2,32 +2,66 @@
 
 <main class="page" id="main">
 
-<style>
-  .box {
-    background: red;
-    border: black;
-    height: 5rem;
-  }
-</style>
+<?php
 
+  // Hero
+  get_template_part('blocks/hero', null, [
+    'title' => '<h1>Hero Title</h1>',
+    'image' => [
+      'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+      'title' => 'Codelibry Logo',
+      'alt' => 'codelibry-logo',
+    ],
+    'button_1' => [
+      'url' => '#contact-us',
+      'target' => '_self',
+      'title' => 'Contact Us',
+    ],
+    'button_2' => [
+      'url' => '#learn-more',
+      'target' => '_self',
+      'title' => 'Learn More',
+    ],
+    'description' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
+  ]);
 
-<section class="about-us | section bg-primary-700 clr-neutral-000">
-  <div class="container">
-    <div class="about-us__row | row align-items-center justify-content-between">
-      <div class="about-us__content | flow col-6">
-        <h2 class="heading-2 clr-neutral-000">About us</h2>
-        <p>BrandBoosters was founded with the mission of <strong>helping businesses of all sizes</strong> achieve
-          their marketing
-          goals by working closely with each client to <strong>develop a customized strategy that delivers
-            results</strong>.</p>
-        <a href="" class="button button--accent">Learn more about us</a>
-      </div>
-      <div class="full-height-image position--right col-6" style="--space-top: 2rem">
-        <img class="bg-primary-200 round-top width-full" <?php img_src('image.png') ?> alt="">
-      </div>
-    </div>
-  </div>
-</section>
+  // Logo Slider
+  get_template_part('blocks/logo-slider', null, [
+  'logo-slider' => [
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+      [
+        'url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P-cCaFwyYJmut32fDmmc6Btv8zWzc3nyMg&s',
+        'title' => 'Codelibry Logo',
+        'alt' => 'codelibry-logo',
+      ],
+    ]
+  ]);
+
+?>
 
 </main>
 
