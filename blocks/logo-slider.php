@@ -3,15 +3,12 @@
  * Block: Logo Slider
  */
 
-$logos = get_sub_field('logo-slider');
+$logos = def_prop($args, 'logo-slider', get_sub_field('logo-slider'));
 
 if(!$logos || empty($logos)) {
-
-  get_template_part('template-parts/error/invalid-block', '', [
+  return get_template_part('template-parts/error/invalid-block', '', [
     'title' => 'Logo Slider is empty'
   ]);
-
-  return;
 }
 
 ?>
