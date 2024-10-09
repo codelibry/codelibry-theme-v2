@@ -4,7 +4,6 @@
  */
 
 $title = def_prop($args, 'title', get_sub_field('faq__title'));
-$description = def_prop($args, 'description', get_sub_field('faq__description'));
 
 $faqs = def_prop($args, 'faqs', get_sub_field('faq__list'));
 
@@ -19,14 +18,8 @@ if(!$faqs) {
 <section class="faq | section">
   <div class="container container--narrow | mx-auto text-center">
     <?php if($title): ?>
-      <div class="faq__title">
+      <div class="faq__title | flow">
         <?php echo $title ?>
-      </div>
-    <?php endif; ?>
-
-    <?php if($description): ?>
-      <div class="faq__description | mt-16">
-        <?php echo $description ?>
       </div>
     <?php endif; ?>
 
