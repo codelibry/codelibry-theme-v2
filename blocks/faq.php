@@ -16,12 +16,14 @@ if(!$faqs) {
 ?>
 
 <section class="faq | section">
-  <div class="container container--narrow | mx-auto text-center">
-    <?php if($title): ?>
-      <div class="faq__title | flow">
-        <?php echo $title ?>
-      </div>
-    <?php endif; ?>
+  <div class="container">
+    <div class="container container--narrow | mx-auto text-center">
+      <?php if($title): ?>
+        <div class="faq__title | flow">
+          <?php echo $title ?>
+        </div>
+      <?php endif; ?>
+    </div>
 
     <div class="faq__list | mt-36">
       <?php foreach ($faqs as $faq): ?>

@@ -1,13 +1,24 @@
+<?php
+/*
+ * Block: Contact Us
+ */
+
+$title = def_prop($args, 'title', get_sub_field('contact-us__title'));
+
+if(!$title) {
+  return get_template_part('template-parts/error/invalid-block', '', [
+    'title' => 'Title is required'
+  ]);
+}
+
+?>
+
 <section class="contact-us | section">
   <div class="container container--wide">
     <div class="row g-32">
       <div class="col-5 col-lg-8 col-sm-4">
         <div class="contact-us__content | flow">
-          <h2>Contact Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <?php echo $title ?>
         </div>
       </div>
 
@@ -38,7 +49,7 @@
               </label>
             </div>
 
-            <div class="mt-16 col-12 col-lg-8 col-sm-4 display-flex justify-content-end">
+            <div class="mt-8 col-12 col-lg-8 col-sm-4 display-flex justify-content-end">
               <input type="submit" value="Submit" class="button button--accent | display-inline-block"></input>
             </div>
           </div>

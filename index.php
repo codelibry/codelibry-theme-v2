@@ -92,7 +92,55 @@
   ]);
 
   // Contact Us
-  get_template_part('blocks/contact-us');
+  get_template_part('blocks/contact-us', null, [
+    'title' => '
+      <h2>Contact Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    '
+  ]);
+
+  // Pricing
+  get_template_part('blocks/pricing', null, [
+    'title' => '
+      <h2>Pricing</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    ',
+    'pricings' => [
+      [
+        'title' => 'Title one',
+        'price' => '29',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'link' => [
+          'url' => '#',
+          'title' => 'Upgrade',
+          'target' => '_self',
+        ]
+      ],
+      [
+        'title' => 'Title two',
+        'price' => '79',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'link' => [
+          'url' => '#',
+          'title' => 'Upgrade',
+          'target' => '_self',
+        ]
+      ],
+      [
+        'title' => 'Title Three',
+        'price' => '99',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'link' => [
+          'url' => '#',
+          'title' => 'Upgrade',
+          'target' => '_self',
+        ]
+      ],
+    ]
+  ]);
 
 ?>
 
