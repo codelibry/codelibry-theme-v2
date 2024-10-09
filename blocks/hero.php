@@ -18,7 +18,7 @@ if(!$title) {
 ?>
 
 <section class="hero | section">
-  <div class="container container--wide">
+  <div class="container">
     <div class="row align-items-center justify-content-between g-32">
       <div class="col-6">
         <?php if($title): ?>

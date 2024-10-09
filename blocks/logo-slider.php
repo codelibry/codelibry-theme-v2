@@ -13,9 +13,9 @@ if(!$logos || empty($logos)) {
 
 ?>
 
-<section class="section">
+<section class="logo-slider | section">
   <div class="container">
-    <div class="logo-slider | js-logo-slider">
+    <div class="js-logo-slider">
       <div class="swiper-wrapper">
 
         <?php foreach ($logos as $logo): ?>
