@@ -3,9 +3,9 @@
  * Block: Pricing
  */
 
-$title = def_prop($args, 'title', get_sub_field('pricing__title'));
+$title = get_array_value($args, 'title', get_sub_field('pricing__title'));
 
-$pricings = def_prop($args, 'pricings', get_sub_field('pricing__list'));
+$pricings = get_array_value($args, 'pricings', get_sub_field('pricing__list'));
 
 if(!$pricings) {
   return get_template_part('template-parts/error/invalid-block', '', [

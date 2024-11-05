@@ -3,7 +3,7 @@
  * Block: Logo Slider
  */
 
-$logos = def_prop($args, 'logo-slider', get_sub_field('logo-slider'));
+$logos = get_array_value($args, 'logo-slider', get_sub_field('logo-slider'));
 
 if(!$logos || empty($logos)) {
   return get_template_part('template-parts/error/invalid-block', '', [

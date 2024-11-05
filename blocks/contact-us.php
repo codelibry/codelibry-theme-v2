@@ -3,7 +3,7 @@
  * Block: Contact Us
  */
 
-$title = def_prop($args, 'title', get_sub_field('contact-us__title'));
+$title = get_array_value($args, 'title', get_sub_field('contact-us__title'));
 
 if(!$title) {
   return get_template_part('template-parts/error/invalid-block', '', [

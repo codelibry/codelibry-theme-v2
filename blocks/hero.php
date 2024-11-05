@@ -3,11 +3,11 @@
  * Block: Hero
  */
 
-$title = def_prop($args, 'title', get_sub_field('hero__title'));
-$image = def_prop($args, 'image', get_sub_field('hero__image'));
-$button_1 = def_prop($args, 'button_1', get_sub_field('hero__button-1'));
-$button_2 = def_prop($args, 'button_2', get_sub_field('hero__button-2'));
-$description = def_prop($args, 'description', get_sub_field('hero__description'));
+$title = get_array_value($args, 'title', get_sub_field('hero__title'));
+$image = get_array_value($args, 'image', get_sub_field('hero__image'));
+$button_1 = get_array_value($args, 'button_1', get_sub_field('hero__button-1'));
+$button_2 = get_array_value($args, 'button_2', get_sub_field('hero__button-2'));
+$description = get_array_value($args, 'description', get_sub_field('hero__description'));
 
 if(!$title) {
   return get_template_part('template-parts/error/invalid-block', '', [

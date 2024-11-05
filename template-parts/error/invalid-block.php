@@ -1,6 +1,6 @@
 <?php
 
-$title = def_prop($args, 'title', 'Invalid Block');
+$title = get_array_value($args, 'title', 'Invalid Block');
 
 ?>
 

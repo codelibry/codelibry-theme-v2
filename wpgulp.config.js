@@ -1,5 +1,5 @@
 const projectName = "theme-name"; // Name of your theme
-const projectURL = "wp-site.local"; // Your local server address
+const projectURL = "http://codelibry.local/"; // Your local server address
 
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"

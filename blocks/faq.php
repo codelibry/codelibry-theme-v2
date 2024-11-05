@@ -3,9 +3,9 @@
  * Block: FAQ
  */
 
-$title = def_prop($args, 'title', get_sub_field('faq__title'));
+$title = get_array_value($args, 'title', get_sub_field('faq__title'));
 
-$faqs = def_prop($args, 'faqs', get_sub_field('faq__list'));
+$faqs = get_array_value($args, 'faqs', get_sub_field('faq__list'));
 
 if(!$faqs) {
   return get_template_part('template-parts/error/invalid-block', '', [
