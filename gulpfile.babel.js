@@ -2,34 +2,17 @@
  * Gulpfile.
  *
  * Gulp with WordPress.
- *
- * Implements:
- *      1. Live reloads browser with BrowserSync.
- *      2. CSS: Sass to CSS conversion, error catching, Autoprefixing, Sourcemaps,
- *         CSS minification, and Merge Media Queries.
- *      3. JS: Concatenates & uglifies Vendor and Custom JS files.
- *      4. Images: Minifies PNG, JPEG, GIF and SVG images.
- *      5. Watches files for changes in CSS or JS.
- *      6. Watches files for changes in PHP.
- *      7. Corrects the line endings.
- *      8. InjectCSS instead of browser page reload.
- *      9. Generates .pot file for i18n and l10n.
- *
- * @tutorial https://github.com/ahmadawais/WPGulp
- * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
  */
+
 
 /**
  * Load WPGulp Configuration.
- *
- * TODO: Customize your project in the wpgulp.js file.
  */
 const config = require("./wpgulp.config.js");
 
+
 /**
  * Load Plugins.
- *
- * Load gulp plugins and passing them semantic names.
  */
 const gulp = require("gulp"); // Gulp of-course.
 
@@ -64,6 +47,7 @@ const plumber = require("gulp-plumber"); // Prevent pipe breaking caused by erro
 const beep = require("beepbeep");
 const zip = require("gulp-zip"); // Zip plugin or theme file.
 
+
 /**
  * Custom Error Handler.
  *
@@ -75,6 +59,7 @@ const errorHandler = (r) => {
 
   // this.emit('end');
 };
+
 
 /**
  * Task: `browser-sync`.
@@ -99,6 +84,7 @@ const reload = (done) => {
   browserSync.reload();
   done();
 };
+
 
 /**
  * Task: `styles`.
@@ -149,6 +135,7 @@ gulp.task("styles", () => {
       })
     );
 });
+
 
 /**
  * Task: `stylesRTL`.
@@ -203,6 +190,7 @@ gulp.task("stylesRTL", () => {
     );
 });
 
+
 /**
  * Task: `vendorsJS`.
  *
@@ -250,6 +238,7 @@ gulp.task("vendorsJS", () => {
       })
     );
 });
+
 
 /**
  * Task: `customJS`.
@@ -299,6 +288,7 @@ gulp.task("customJS", () => {
     );
 });
 
+
 /**
  * Task: `images`.
  *
@@ -339,6 +329,7 @@ gulp.task("images", () => {
     );
 });
 
+
 /**
  * Task: `clear-images-cache`.
  *
@@ -348,6 +339,7 @@ gulp.task("images", () => {
 gulp.task("clearCache", function (done) {
   return cache.clearAll(done);
 });
+
 
 /**
  * WP POT Translation File Generator.
@@ -382,6 +374,7 @@ gulp.task("translate", () => {
     );
 });
 
+
 /**
  * Zips theme or plugin and places in the parent directory
  *
@@ -398,6 +391,7 @@ gulp.task("zip", () => {
     .pipe(gulp.dest(config.zipDestination));
 });
 
+
 /**
  * Purge CSS
  *
@@ -406,14 +400,15 @@ gulp.task("zip", () => {
 gulp.task('purgecss', () => {
   return gulp
     .src([
-      config.styleDestination + 'main.css', 
-      config.styleDestination + 'main.min.css'
+      config.styleDestination + config.jsCustomFile + '.css',
+      config.styleDestination + config.jsCustomFile + '.min.css'
     ], { allowEmpty: true })
     .pipe(purgecss({
-      content: [config.watchPhp]
+      content: ['./**/*.php', './**/*.js']
     }))
     .pipe(gulp.dest(config.styleDestination));
 });
+
 
 /**
  * Watch Tasks.
@@ -424,7 +419,6 @@ gulp.task(
   "default",
   gulp.parallel(
     "styles",
-    "purgecss",
     "vendorsJS",
     "customJS",
     "images",

@@ -1,3 +1,6 @@
+/*
+ * Project Name and Local Server URL
+ */
 const projectName = "theme-name"; // Name of your theme
 const projectURL = "http://codelibry.local/"; // Your local server address
 
@@ -5,47 +8,45 @@ const projectURL = "http://codelibry.local/"; // Your local server address
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
 
-// Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
+
+/*
+ * Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
+ */
 const productURL = "./";
 const browserAutoOpen = false;
 const injectChanges = true;
 
-// >>>>> Style options.
-// Path to main .sass file.
-const styleSRC = "./sass/main.sass";
 
-// Path to place the compiled CSS file. Default set to root folder.
-const styleDestination = "./dist/";
+/*
+ * Styles Options
+ */
+const styleSRC = "./sass/main.sass"; // Path to main .sass file.
+const styleDestination = "./dist/"; // Path to place the compiled CSS file. Default set to root folder.
 
-// Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
-const outputStyle = "compact";
+const outputStyle = "compact"; // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 const errLogToConsole = true;
 const precision = 10;
 
-// JS Vendor options.
 
-// Path to JS vendor folder.
-const jsVendorSRC = "./js/vendor/**/*.js";
+/*
+ * JS Vendor options.
+ */
+const jsVendorSRC = "./js/vendor/**/*.js"; // Path to JS vendor folder.
+const jsVendorDestination = "./dist/"; // Path to place the compiled JS vendors file.
+const jsVendorFile = "vendor"; // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
-// Path to place the compiled JS vendors file.
-const jsVendorDestination = "./dist/";
 
-// Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
-const jsVendorFile = "vendor";
+/*
+ * JS Custom options.
+ */
+const jsCustomSRC = "./js/**/*.js"; // Path to JS custom scripts folder.
+const jsCustomDestination = "./dist/"; // Path to place the compiled JS custom scripts file.
+const jsCustomFile = "main"; // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
-// JS Custom options.
 
-// Path to JS custom scripts folder.
-const jsCustomSRC = "./js/**/*.js";
-
-// Path to place the compiled JS custom scripts file.
-const jsCustomDestination = "./dist/";
-
-// Compiled JS custom file name. Default set to custom i.e. custom.js.
-const jsCustomFile = "main";
-
-// Images options.
-
+/*
+ * Images options.
+ */
 // Source folder of images which should be optimized and watched.
 // > You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
 const imgSRC = "./assets/images/raw/**/*";
@@ -54,24 +55,20 @@ const imgSRC = "./assets/images/raw/**/*";
 // > Must be different from the imagesSRC folder.
 const imgDST = "./assets/images/";
 
-// >>>>> Watch files paths.
-// Path to all *.sass files inside css folder and inside them.
-const watchStyles = "./sass/**/*.{sass,scss}";
 
-// Path to all vendor JS files.
-const watchJsVendor = "./js/vendor/**/*.js";
+/*
+ * Watch Files Paths
+ */
+const watchStyles = "./sass/**/*.{sass,scss}"; // Path to all *.sass *.scss files
+const watchJsVendor = "./js/vendor/**/*.js"; // Path to all vendor JS files.
+const watchJsCustom = "./js/**/*.js"; // Path to all custom JS files.
+const watchPhp = "./**/*.php"; // Path to all PHP files.
 
-// Path to all custom JS files.
-const watchJsCustom = "./js/**/*.js";
 
-// Path to all PHP files.
-const watchPhp = "./**/*.php";
-
-// >>>>> Zip file config.
-// Must have.zip at the end.
-const zipName = `${projectName}.zip`;
-
-// Must be a folder outside of the zip folder.
+/*
+ * Zip File config
+ */
+const zipName = `${projectName}.zip`; // Must have.zip at the end.
 const zipDestination = "./../"; // Default: Parent folder.
 const zipIncludeGlob = ["./**/*"]; // Default: Include all files/folders in current directory.
 
