@@ -39,6 +39,7 @@ const minifycss = require("gulp-uglifycss"); // Minifies CSS files.
 const autoprefixer = require("gulp-autoprefixer"); // Autoprefixing magic.
 const mmq = require("gulp-merge-media-queries"); // Combine matching media queries into one.
 const rtlcss = require("gulp-rtlcss"); // Generates RTL stylesheet.
+const purgecss = require('gulp-purgecss'); // Removes unused css
 
 // JS related plugins.
 const concat = require("gulp-concat"); // Concatenates JS files.
@@ -398,6 +399,23 @@ gulp.task("zip", () => {
 });
 
 /**
+ * Purge CSS
+ *
+ * Removes unused CSS for both main.css and main.min.css
+ */
+gulp.task('purgecss', () => {
+  return gulp
+    .src([
+      config.styleDestination + 'main.css', 
+      config.styleDestination + 'main.min.css'
+    ], { allowEmpty: true })
+    .pipe(purgecss({
+      content: [config.watchPhp]
+    }))
+    .pipe(gulp.dest(config.styleDestination));
+});
+
+/**
  * Watch Tasks.
  *
  * Watches for file changes and runs specific tasks.
@@ -406,6 +424,7 @@ gulp.task(
   "default",
   gulp.parallel(
     "styles",
+    "purgecss",
     "vendorsJS",
     "customJS",
     "images",
@@ -419,3 +438,5 @@ gulp.task(
     }
   )
 );
+
+
