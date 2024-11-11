@@ -16,8 +16,9 @@
   background-color: $button-default-background
   color: $button-default-color
 
+  //+can-hover
   +can-hover
-    &:is(:hover, :focus)
+    &:hover, &:focus
       background-color: $button-default-background-hover
       color: $button-default-color-hover
 
@@ -26,7 +27,7 @@
     color: $button-accent-color
 
     +can-hover
-      &:is(:hover, :focus)
+      &:hover, &:focus
         background-color: $button-accent-background-hover
         color: $button-accent-color-hover
 
@@ -35,6 +36,6 @@
     color: $button-primary-color
 
     +can-hover
-      &:is(:hover, :focus)
+      &:hover, &:focus
         background-color: $button-primary-background-hover
         color: $button-primary-color-hover

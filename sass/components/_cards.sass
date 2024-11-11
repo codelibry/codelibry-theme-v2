@@ -11,8 +11,9 @@
   box-shadow: $card-shadow
   border-radius: $card-border-radius
 
-  &:is(:hover, :focus)
-    color: $card-color-default
+  +can-hover
+    &:hover, &:focus
+      color: $card-color-default
 
   &__heading
     @include heading($card-heading-font-size, $card-heading-color-default)

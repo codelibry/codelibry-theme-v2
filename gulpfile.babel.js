@@ -404,7 +404,7 @@ gulp.task('purgecss', () => {
       config.styleDestination + config.jsCustomFile + '.min.css'
     ], { allowEmpty: true })
     .pipe(purgecss({
-      content: ['./**/*.php', './**/*.js']
+      content: ['./**/*.php', './**/*.js', './**/*.html']
     }))
     .pipe(gulp.dest(config.styleDestination));
 });
@@ -419,6 +419,7 @@ gulp.task(
   "default",
   gulp.parallel(
     "styles",
+    "purgecss",
     "vendorsJS",
     "customJS",
     "images",

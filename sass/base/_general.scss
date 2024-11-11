@@ -9,8 +9,10 @@ body {
 
 a {
   color: $link-color;
-}
 
-a:is(:hover, :focus) {
-  color: $link-color-hover;
+  @include can-hover {
+    &:hover, &:focus {
+      color: $link-color-hover;
+    }
+  }
 }
