@@ -44,3 +44,14 @@ function smartwp_remove_wp_block_library_css() {
 }
 
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css');
+
+/**
+ * =================================================================
+ * Check if WooCommerce is activated
+ * =================================================================
+ */
+if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	function is_woocommerce_activated() {
+		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+	}
+}
