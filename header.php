@@ -39,3 +39,4 @@
 <?php
   get_template_part('template-parts/skip-links');
   get_template_part('template-parts/header/header');
+  get_template_part('template-parts/breadcrumbs');
