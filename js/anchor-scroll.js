@@ -45,7 +45,11 @@ jQuery(document).ready(function ($) {
     }
 
     animate(hash) {
-      window.lenis.scrollTo(hash);
+      if (window.lenis) { /* If Lenis Enabled */
+        window.lenis.scrollTo(0);
+      } else {
+        $('html, body').animate({ scrollTop: 0 }, '300');
+      }
     }
   }
 
