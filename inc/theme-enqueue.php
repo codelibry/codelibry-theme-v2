@@ -48,9 +48,17 @@ function codelibry_enqueue () {
   // Swiper Slider: https://swiperjs.com/get-started
   wp_enqueue_script( 'swiper', "{$LIB}/swiper.js", array(), '1.0.0', true );
 
+  // Lottie Player: https://lottiefiles.github.io/lottie-player/usage.html
+  wp_enqueue_script( 'lottie-player', "{$LIB}/lottie-player.js", array(), '1.0.0', true );
+
   // Our Custom JavaScript (should depend on libaries above)
   wp_enqueue_script( 'main', "{$DIST}/main.min.js", array(
-    'jquery', 'gsap', 'scroll-trigger', 'lenis', 'swiper'
+    'jquery', 
+    'gsap', 
+    'scroll-trigger', 
+    'lenis', 
+    'swiper',
+    'lottie-player',
   ), $custom_version, true );
 
 
