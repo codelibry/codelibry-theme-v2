@@ -45,10 +45,10 @@ jQuery(document).ready(function ($) {
     }
 
     animate(hash) {
-      if (window.lenis) { /* If Lenis Enabled */
-        window.lenis.scrollTo(0);
+      if (window.lenis) {
+        window.lenis.scrollTo(hash);
       } else {
-        $('html, body').animate({ scrollTop: 0 }, '300');
+        $('html, body').animate({scrollTop: $(hash).offset().top}, 300);
       }
     }
   }
