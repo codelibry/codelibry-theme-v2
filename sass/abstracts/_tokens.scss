@@ -361,6 +361,7 @@ $popup-button-size: $size-20;
 // ===============================
 // Skip Links - components/skip-links
 // ===============================
+
 $skip-link-padding: $size-20 $size-32;
 $skip-link-background-color: $color-primary-400;
 $skip-link-color: $color-neutral-000;
@@ -384,14 +385,3 @@ $grid-row-gap-default: 1rem;
 $grid-row-gap-large: 1rem;
 $grid-row-gap-medium: 1rem;
 $grid-row-gap-small: 1rem;
-
-
-// ===============================
-// Logo Slider - blocks/logo-slider
-// ===============================
-
-$logo-slider-slide-width: rem(350);
-$logo-slider-slide-height: rem(120);
-$logo-slider-slide-image-fit: contain;
-$logo-slider-transition-function: linear;
-$logo-slider-overflow-x: hidden;
