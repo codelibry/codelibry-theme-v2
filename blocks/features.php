@@ -24,7 +24,7 @@ if(!$features) return;
 				$title = $item['title'];
 				$text = $item['text'];
       ?>
-				<article class="feature | card">
+				<article class="feature">
 					<div class="feature__icon">
 						<?php if($icon && is_svg_icon($icon['url'])): ?>
               <?php echo file_get_contents($icon['url']) ?>
