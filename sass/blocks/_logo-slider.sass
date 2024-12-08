@@ -1,15 +1,24 @@
+// Slider
+$transition-function: linear
+$overflow-x: hidden
+
+// Slide
+$slide-width: 10rem
+$slide-height: 8rem
+$slide-image-fit: contain
+
 .logo-slider
   .swiper-wrapper
-    transition-timing-function : $logo-slider-transition-function
+    transition-timing-function : $transition-function
 
   .container
-    overflow-x: $logo-slider-overflow-x
+    overflow-x: $overflow-x
 
   .swiper-slide
-    width: $logo-slider-slide-width
-    height: $logo-slider-slide-height
+    width: $slide-width
+    height: $slide-height
 
     img
       width: 100%
       height: 100%
-      object-fit: $logo-slider-slide-image-fit
+      object-fit: $slide-image-fit
