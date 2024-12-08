@@ -1,3 +1,6 @@
+/*
+ * Features Block
+ */
 .features
   --title-margin-bottom: 2rem // 32px
   --grid-gap: 2rem 2rem // 32px 32px
@@ -11,13 +14,14 @@
     gap: var(--grid-gap)
     grid-template-columns: repeat(auto-fit, minmax(calc(min(var(--feature-min-width), 100%)), 1fr))
 
-
+/*
+ * Feature Item
+ */
 .feature
   --icon-width: 3rem // 48px
   --icon-height: 3rem // 48px
-
-  --icon-margin-bottom: 0.5rem // 8px
-  --title-margin-bottom: 0.5rem // 8px
+  --icon-margin-bottom: 1rem // 16px
+  --title-margin-bottom: 1rem // 16px
 
   display: flex
   flex-direction: column
@@ -31,7 +35,7 @@
     height: var(--icon-height)
     margin-bottom: var(--icon-margin-bottom)
 
-    & img
+    img, svg
       inset: 0
       position: absolute
       width: 100%

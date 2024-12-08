@@ -7,6 +7,7 @@ $title = get_sub_field('features__title');
 $features = get_sub_field('features__list');
 
 if(!$features) return;
+
 ?>
 
 <section class="features | section">
@@ -23,12 +24,14 @@ if(!$features) return;
 				$title = $item['title'];
 				$text = $item['text'];
       ?>
-				<article class="feature">
+				<article class="feature | card">
 					<div class="feature__icon">
-						<?php if($icon): ?>
-								<img <?php acf_image_attrs($icon) ?> >
+						<?php if($icon && is_svg_icon($icon['url'])): ?>
+              <?php echo file_get_contents($icon['url']) ?>
+            <?php elseif($icon): ?>
+              <img <?php acf_image_attrs($icon) ?> >
 						<?php else: ?>
-								<img <?php img_src('/placeholder-icon.svg'); ?> alt="placeholder">
+              <?php echo get_inline_svg('placeholder-icon.svg') ?>
 						<?php endif; ?>
 					</div>
 

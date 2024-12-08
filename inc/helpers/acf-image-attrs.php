@@ -11,17 +11,11 @@
  *                          or an array with `url` and `alt` keys.
  */
 function acf_image_attrs($image) {
-
-  // Handle case where $image is an integer (ID).
   if(is_int($image)){
     echo acf_image_src($image) . ' alt="' . esc_attr(get_the_title($image)) . '"';
   } else {
-
-    // Assume $image is an array with URL and alt text.
     $url = $image['url'];
     $alt = $image['alt'] ? $image['alt'] : $image['title'];
-
-    // Output the src and alt attributes directly.
     echo 'src="' . esc_url($url) . '" alt="' . esc_attr($alt) . '"';
   }
 }

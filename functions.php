@@ -21,5 +21,6 @@ require get_template_directory().'/inc/helpers/pretty-log.php';
 require get_template_directory().'/inc/helpers/excerpt.php';
 require get_template_directory().'/inc/helpers/get-img-src.php';
 require get_template_directory().'/inc/helpers/img-src.php';
+require get_template_directory().'/inc/helpers/is-svg-icon.php';
 
 require get_template_directory().'/inc/block-uploader.php';
