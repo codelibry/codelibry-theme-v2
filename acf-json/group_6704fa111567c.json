@@ -19,7 +19,7 @@
             "layouts": {
                 "layout_670503499dab4": {
                     "key": "layout_670503499dab4",
-                    "name": "hero",
+                    "name": "hero-3",
                     "label": "Hero",
                     "display": "block",
                     "sub_fields": [
@@ -184,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733661734
+    "modified": 1733845043
 }

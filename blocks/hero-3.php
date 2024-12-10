@@ -1,6 +1,6 @@
 <?php
 /*
- * Block: Hero
+ * Block: Hero-3
  */
 
 $title = get_array_value($args, 'title', get_sub_field('hero__title'));
@@ -15,23 +15,23 @@ if(!$title) {
 
 ?>
 
-<section class="hero | section">
+<section class="hero-3 | section">
   <div class="container">
-    <div class="hero__text">
+    <div class="hero-3__text">
       <?php if($title): ?>
-        <div class="hero__title">
+        <div class="hero-3__title">
           <?php echo $title ?>
         </div>
       <?php endif; ?>
       
-      <div class="hero__cta">
+      <div class="hero-3__cta">
         <?php if($description): ?>
-          <div class="hero__description">
+          <div class="hero-3__description">
             <?php echo $description ?>
           </div>
         <?php endif; ?>
 
-        <div class="hero__buttons">
+        <div class="hero-3__buttons">
           <?php if($button_1): ?>
             <a class="button button--primary" <?php acf_link_attrs($button_1) ?>>
               <?php echo $button_1['title'] ?>
@@ -50,7 +50,7 @@ if(!$title) {
 
   <?php if($image): ?>
     <div class="container container--wide">
-      <div class="hero__banner">
+      <div class="hero-3__banner">
         <img <?php acf_image_attrs($image) ?> />
       </div>
     </div>
