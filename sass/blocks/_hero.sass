@@ -1,0 +1,50 @@
+.hero
+  --text-margin-bottom: 5rem // 80px
+  --text-max-width: 53rem // 848px
+  --title-margin-bottom: 2.5rem // 40px
+  --banner-ratio: 1440 / 540
+  --cta-gap: 1.75rem // 28px
+  --description-width: 25.625rem // 410px
+  --buttons-column-gap: 1.5rem // 24px
+  --buttons-row-gap: 0.5rem // 8px
+
+  &__text
+    margin-bottom: var(--text-margin-bottom)
+
+  &__title
+    margin-bottom: var(--title-margin-bottom)
+
+  &__cta
+    display: flex
+    align-items: flex-end
+    flex-wrap: wrap
+    gap: var(--cta-gap)
+
+  &__description
+    width: var(--description-width)
+
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    column-gap: var(--buttons-column-gap)
+    row-gap: var(--buttons-row-gap)
+
+  &__banner
+    aspect-ratio: var(--banner-ratio)
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+
+  @include max-screen(small)
+    --text-margin-bottom: 2.5rem // 40px
+    --title-margin-bottom: 1.25rem // 20px
+    --banner-ratio: 3 / 2
+
+    .button
+      width: 100%
