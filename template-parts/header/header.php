@@ -8,6 +8,8 @@ $phone = get_field('phone', 'option');
 ?>
 
 <header class="header" id="header">
+
+  <!-- Header Top -->
   <div class="header-top">
     <div class="container">
       <div class="header-top__inner">
@@ -26,6 +28,7 @@ $phone = get_field('phone', 'option');
       </div>
     </div>
   </div>
+  <!-- Header Top End -->
 
   <div class="container">
     <div class="header__inner">
@@ -48,35 +51,40 @@ $phone = get_field('phone', 'option');
         </a>
       <?php endif; ?>
 
-      <!--Mobile Menu-->
-      <button class="mobile-menu__toggle | d-none d-lg-block | js-mobile-menu-button">
-        <span class="js-mobile-open-icon">
-          <?php echo get_inline_svg('open-menu-icon.svg') ?>
-        </span>
-        <span class="js-mobile-close-icon" style="display:none">
-          <?php echo get_inline_svg('close-menu-icon.svg') ?>
-        </span>
-      </button>
 
-      <div class="mobile-menu | js-mobile-menu" style="display:none">
-        <div class="container">
-          <div class="mobile-menu__inner">
-            <?php wp_nav_menu([
-              'theme_location' => 'header-menu',
-              'container' => 'nav',
-              'menu_class' => 'header-menu',
-              'container_class' => 'header-menu',
-            ]) ?>
+      <!-- Mobile Start -->
+        <!-- Menu Burger Button -->
+        <button class="mobile-menu__toggle | d-none d-lg-block | js-mobile-menu-button">
+          <span class="js-mobile-open-icon">
+            <?php echo get_inline_svg('open-menu-icon.svg') ?>
+          </span>
+          <span class="js-mobile-close-icon" style="display:none">
+            <?php echo get_inline_svg('close-menu-icon.svg') ?>
+          </span>
+        </button>
+        <!-- Menu Burger Button End -->
 
-            <?php if($button): ?>
-              <a class="header__button mobile-menu__button | button" <?php acf_link_attrs($button) ?>>
-                <?php echo $button['title'] ?>
-              </a>
-            <?php endif; ?>
+        <!-- Mobile Menu Start -->
+        <div class="mobile-menu | js-mobile-menu" style="display:none">
+          <div class="container">
+            <div class="mobile-menu__inner">
+              <?php wp_nav_menu([
+                'theme_location' => 'header-menu',
+                'container' => 'nav',
+                'menu_class' => 'header-menu',
+                'container_class' => 'header-menu',
+              ]) ?>
+
+              <?php if($button): ?>
+                <a class="header__button mobile-menu__button | button" <?php acf_link_attrs($button) ?>>
+                  <?php echo $button['title'] ?>
+                </a>
+              <?php endif; ?>
+            </div>
           </div>
         </div>
-      </div>
-      <!--Mobile End-->
+        <!-- Mobile Menu End -->
+      <!-- Mobile End -->
 
     </div>
   </div>
