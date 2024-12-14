@@ -37,4 +37,11 @@ if (function_exists('acf_add_options_page')) {
 		'menu_title' => '404 - Error page',
 		'parent_slug' => 'site-settings',
 	));
+
+	// Allow client to change some content in the Header
+	acf_add_options_sub_page(array(
+		'page_title' => 'Header Settings',
+		'menu_title' => 'Header Settings',
+		'parent_slug' => 'site-settings',
+	));
 }
