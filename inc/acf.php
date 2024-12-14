@@ -38,10 +38,17 @@ if (function_exists('acf_add_options_page')) {
 		'parent_slug' => 'site-settings',
 	));
 
-	// Allow client to change Header content
+	// Header Settings
 	acf_add_options_sub_page(array(
 		'page_title' => 'Header Settings',
 		'menu_title' => 'Header Settings',
+		'parent_slug' => 'site-settings',
+	));
+
+	// Footer Settings
+	acf_add_options_sub_page(array(
+		'page_title' => 'Footer Settings',
+		'menu_title' => 'Footer Settings',
 		'parent_slug' => 'site-settings',
 	));
 }

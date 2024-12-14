@@ -21,9 +21,10 @@ if ($socials) : ?>
         if ($socialURL) : 
         ?>
         <li class="social-media__item">
-            <a href="<?php echo $socialURL;?>" target="_blank">
+          <a href="<?php echo $socialURL;?>" target="_blank">
             <?php echo get_inline_svg($socialMedia . '.svg');?>
-            </a>
+            <?php echo $socialMedia ?>
+          </a>
         </li>
         
 
