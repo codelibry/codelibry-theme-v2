@@ -1,0 +1,64 @@
+.features
+  // .features__container
+  &__container
+  // .features__title
+  &__title
+  // .features__list
+  &__list
+    gap: rem(20) rem(20)
+  // .features__item
+  &__item
+
+.item-features
+  display: flex
+  flex-direction: column
+  // gap: rem(20)
+  // .item-features__icon
+  &__icon
+    width: rem(48)
+    height: rem(48)
+    position: relative
+    & img
+      position: absolute
+      width: 100%
+      height: 100%
+      inset: 0
+      object-fit: contain
+  // .item-features__title
+  &__title
+    // .item-features__text
+  &__text
+
+
+// This part is used for general block styling
+
+
+.features
+  background-color: #f9f9f9
+  &__item
+    padding: 15px
+    border-radius: 30px
+
+.item-features
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .05)
+  background-color: #fff
+  
+  padding: 1.25rem
+  &__icon
+    width: rem(70)
+    height: rem(70)
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgb(181, 26, 18)
+    border-radius: 50%
+    img,svg
+      max-width: 50%
+      object-fit: contain
+      display: block
+      margin: auto
+      
+  &__title
+    margin-top: 15px
+  &__text
+    margin-top: 15px

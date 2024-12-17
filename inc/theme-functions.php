@@ -55,3 +55,11 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
 	}
 }
+
+
+function def_prop($array, $key, $default = false)
+{
+  return isset($array[$key]) && !empty($array[$key])
+    ? $array[$key]
+    : $default;
+}

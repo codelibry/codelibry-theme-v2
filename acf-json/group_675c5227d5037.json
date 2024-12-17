@@ -1,0 +1,65 @@
+{
+    "key": "group_675c5227d5037",
+    "title": "Part: Section title, Anchor",
+    "fields": [
+        {
+            "key": "field_675c518928184",
+            "label": "Section Label",
+            "name": "section_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For admin usage only. This will not be outputted to the actual webpage",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_675c520d80729",
+            "label": "Section Anchor",
+            "name": "section_anchor",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For admin usage only. This will not be outputted to the actual webpage",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1734103649
+}
